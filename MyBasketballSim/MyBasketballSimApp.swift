@@ -11,7 +11,7 @@ import SwiftUI
 struct MyBasketballSimApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+			GameView(model: GameModel())
         }
     }
 }
