@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66649A902C2EFD930062058E /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66649A8F2C2EFD930062058E /* WidgetKit.framework */; };
+		66649A922C2EFD930062058E /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66649A912C2EFD930062058E /* SwiftUI.framework */; };
+		66649A952C2EFD930062058E /* MyGameWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66649A942C2EFD930062058E /* MyGameWidgetBundle.swift */; };
+		66649A972C2EFD930062058E /* MyGameLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66649A962C2EFD930062058E /* MyGameLiveActivity.swift */; };
+		66649A992C2EFD930062058E /* MyGameWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66649A982C2EFD930062058E /* MyGameWidget.swift */; };
+		66649A9B2C2EFD940062058E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66649A9A2C2EFD940062058E /* Assets.xcassets */; };
+		66649A9F2C2EFD940062058E /* MyGameWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 66649A8D2C2EFD930062058E /* MyGameWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		66649AA42C2F0F420062058E /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AA868E2C2DE24100739536 /* GameState.swift */; };
 		66AA867C2C2DE1D900739536 /* MyBasketballSimApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AA867B2C2DE1D900739536 /* MyBasketballSimApp.swift */; };
 		66AA867E2C2DE1D900739536 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AA867D2C2DE1D900739536 /* GameView.swift */; };
 		66AA86802C2DE1DA00739536 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AA867F2C2DE1DA00739536 /* Assets.xcassets */; };
@@ -19,7 +27,39 @@
 		66AA86962C2DE29E00739536 /* Image+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AA86952C2DE29E00739536 /* Image+Ext.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		66649A9D2C2EFD940062058E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66AA86702C2DE1D900739536 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66649A8C2C2EFD930062058E;
+			remoteInfo = MyGameWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66649AA02C2EFD940062058E /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				66649A9F2C2EFD940062058E /* MyGameWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		66649A8D2C2EFD930062058E /* MyGameWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyGameWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		66649A8F2C2EFD930062058E /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		66649A912C2EFD930062058E /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		66649A942C2EFD930062058E /* MyGameWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGameWidgetBundle.swift; sourceTree = "<group>"; };
+		66649A962C2EFD930062058E /* MyGameLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGameLiveActivity.swift; sourceTree = "<group>"; };
+		66649A982C2EFD930062058E /* MyGameWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGameWidget.swift; sourceTree = "<group>"; };
+		66649A9A2C2EFD940062058E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66649A9C2C2EFD940062058E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AA86782C2DE1D900739536 /* MyBasketballSim.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBasketballSim.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66AA867B2C2DE1D900739536 /* MyBasketballSimApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBasketballSimApp.swift; sourceTree = "<group>"; };
 		66AA867D2C2DE1D900739536 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -34,6 +74,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		66649A8A2C2EFD930062058E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66649A922C2EFD930062058E /* SwiftUI.framework in Frameworks */,
+				66649A902C2EFD930062058E /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66AA86752C2DE1D900739536 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,10 +93,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66649A8E2C2EFD930062058E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66649A8F2C2EFD930062058E /* WidgetKit.framework */,
+				66649A912C2EFD930062058E /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66649A932C2EFD930062058E /* MyGameWidget */ = {
+			isa = PBXGroup;
+			children = (
+				66649A942C2EFD930062058E /* MyGameWidgetBundle.swift */,
+				66649A962C2EFD930062058E /* MyGameLiveActivity.swift */,
+				66649A982C2EFD930062058E /* MyGameWidget.swift */,
+				66649A9A2C2EFD940062058E /* Assets.xcassets */,
+				66649A9C2C2EFD940062058E /* Info.plist */,
+			);
+			path = MyGameWidget;
+			sourceTree = "<group>";
+		};
 		66AA866F2C2DE1D900739536 = {
 			isa = PBXGroup;
 			children = (
 				66AA867A2C2DE1D900739536 /* MyBasketballSim */,
+				66649A932C2EFD930062058E /* MyGameWidget */,
+				66649A8E2C2EFD930062058E /* Frameworks */,
 				66AA86792C2DE1D900739536 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				66AA86782C2DE1D900739536 /* MyBasketballSim.app */,
+				66649A8D2C2EFD930062058E /* MyGameWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +177,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		66649A8C2C2EFD930062058E /* MyGameWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66649AA32C2EFD940062058E /* Build configuration list for PBXNativeTarget "MyGameWidgetExtension" */;
+			buildPhases = (
+				66649A892C2EFD930062058E /* Sources */,
+				66649A8A2C2EFD930062058E /* Frameworks */,
+				66649A8B2C2EFD930062058E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyGameWidgetExtension;
+			productName = MyGameWidgetExtension;
+			productReference = 66649A8D2C2EFD930062058E /* MyGameWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		66AA86772C2DE1D900739536 /* MyBasketballSim */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66AA86862C2DE1DA00739536 /* Build configuration list for PBXNativeTarget "MyBasketballSim" */;
@@ -111,10 +201,12 @@
 				66AA86742C2DE1D900739536 /* Sources */,
 				66AA86752C2DE1D900739536 /* Frameworks */,
 				66AA86762C2DE1D900739536 /* Resources */,
+				66649AA02C2EFD940062058E /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				66649A9E2C2EFD940062058E /* PBXTargetDependency */,
 			);
 			name = MyBasketballSim;
 			productName = MyBasketballSim;
@@ -131,6 +223,9 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					66649A8C2C2EFD930062058E = {
+						CreatedOnToolsVersion = 15.4;
+					};
 					66AA86772C2DE1D900739536 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -150,11 +245,20 @@
 			projectRoot = "";
 			targets = (
 				66AA86772C2DE1D900739536 /* MyBasketballSim */,
+				66649A8C2C2EFD930062058E /* MyGameWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		66649A8B2C2EFD930062058E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66649A9B2C2EFD940062058E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66AA86762C2DE1D900739536 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -167,6 +271,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		66649A892C2EFD930062058E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66649A992C2EFD930062058E /* MyGameWidget.swift in Sources */,
+				66649AA42C2F0F420062058E /* GameState.swift in Sources */,
+				66649A972C2EFD930062058E /* MyGameLiveActivity.swift in Sources */,
+				66649A952C2EFD930062058E /* MyGameWidgetBundle.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66AA86742C2DE1D900739536 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -184,7 +299,69 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		66649A9E2C2EFD940062058E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66649A8C2C2EFD930062058E /* MyGameWidgetExtension */;
+			targetProxy = 66649A9D2C2EFD940062058E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		66649AA12C2EFD940062058E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SVT2GB99S9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyGameWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyGameWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tazmancoder.MyBasketballSim.MyGameWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66649AA22C2EFD940062058E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SVT2GB99S9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyGameWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MyGameWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tazmancoder.MyBasketballSim.MyGameWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		66AA86842C2DE1DA00739536 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -307,6 +484,7 @@
 		66AA86872C2DE1DA00739536 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -336,6 +514,7 @@
 		66AA86882C2DE1DA00739536 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -365,6 +544,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		66649AA32C2EFD940062058E /* Build configuration list for PBXNativeTarget "MyGameWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66649AA12C2EFD940062058E /* Debug */,
+				66649AA22C2EFD940062058E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		66AA86732C2DE1D900739536 /* Build configuration list for PBXProject "MyBasketballSim" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
