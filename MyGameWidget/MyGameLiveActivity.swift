@@ -24,36 +24,57 @@ struct MyGameLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: MyGameAttributes.self) { context in
             // Lock screen/banner UI goes here
-            VStack {
-				Text("HomeScore: \(context.state.gameState.homeScore)")
-            }
-            .activityBackgroundTint(Color.cyan)
-            .activitySystemActionForegroundColor(Color.black)
-
+			LiveActivityView()
         } dynamicIsland: { context in
             DynamicIsland {
                 // Expanded UI goes here.  Compose the expanded UI through
                 // various regions, like leading/trailing/center/bottom
                 DynamicIslandExpandedRegion(.leading) {
-                    Text("Leading")
+					HStack {
+						Image(.warriors)
+							.teamLogoModifier(frame: 40)
+						
+						Text("100")
+							.font(.title)
+							.fontWeight(.semibold)
+					}
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text("Trailing")
+					HStack {
+						Text("88")
+							.font(.title)
+							.fontWeight(.semibold)
+
+						Image(.bulls)
+							.teamLogoModifier(frame: 40)
+					}
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    Text("HomeScore: \(context.state.gameState.homeScore)")
-                    // more content
+					HStack {
+						Image(.warriors)
+							.teamLogoModifier(frame: 20)
+						Text("S. Courier drains a 3")
+					}
                 }
 				DynamicIslandExpandedRegion(.center) {
-					Text("HomeScore: \(context.state.gameState.homeScore)")
+					Text("5:24 3Q.")
 					// more content
 				}
             } compactLeading: {
-                Text("L")
+				Image(.warriors)
+					.teamLogoModifier()
+				
+				Text("100")
+					.fontWeight(.semibold)
             } compactTrailing: {
-                Text("HomeScore: \(context.state.gameState.homeScore)")
+				Text("88")
+					.fontWeight(.semibold)
+
+				Image(.bulls)
+					.teamLogoModifier()
             } minimal: {
-                Text("HomeScore: \(context.state.gameState.homeScore)")
+				Image(.bulls)
+					.teamLogoModifier()
             }
             .widgetURL(URL(string: "http://www.apple.com"))
             .keylineTint(Color.red)
@@ -80,6 +101,5 @@ extension MyGameAttributes.ContentState {
 #Preview("Notification", as: .content, using: MyGameAttributes.preview) {
    MyGameLiveActivity()
 } contentStates: {
-    MyGameAttributes.ContentState.smiley
-    MyGameAttributes.ContentState.starEyes
+	MyGameAttributes.ContentState(gameState: GameState(homeScore: 34, awayScore: 44, scoringTeamName: "Bulls", lastAction: "Made a 3 pointer"))
 }
