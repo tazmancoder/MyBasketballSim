@@ -7,14 +7,15 @@
 
 import Foundation
 import ActivityKit
+import Observation
 
-final class GameModel: ObservableObject, GameSimulatorDelegate {
+@Observable
+class GameModel: GameSimulatorDelegate {
 	
-	@Published var gameState = GameState(homeScore: 0,
+	var gameState = GameState(homeScore: 0,
 										 awayScore: 0,
 										 scoringTeamName: "",
 										 lastAction: "")
-	
 	var liveActivity: Activity<MyGameAttributes>? = nil
 	let simulator = GameSimulator()
 	
@@ -25,9 +26,10 @@ final class GameModel: ObservableObject, GameSimulatorDelegate {
 	func startLiveActivity() {
 		let attributes = MyGameAttributes(homeTeam: "warriors", awayTeam: "bulls")
 		let currentGameState = MyGameAttributes.ContentState(gameState: gameState)
+		let activityContent = ActivityContent(state: currentGameState, staleDate: nil)
 		
 		do {
-			liveActivity = try Activity.request(attributes: attributes, contentState: currentGameState)
+			liveActivity = try Activity.request(attributes: attributes, content: activityContent)
 		} catch {
 			print("ERROR: \(error.localizedDescription)")
 		}
@@ -35,15 +37,18 @@ final class GameModel: ObservableObject, GameSimulatorDelegate {
 	
 	func didUpdate(gameState: GameState) {
 		self.gameState = gameState
-		
+		let currentGameState = MyGameAttributes.ContentState(gameState: gameState)
+		let activityContent = ActivityContent(state: currentGameState, staleDate: nil)
+
 		Task {
-			await liveActivity?.update(using: .init(gameState: gameState))
+			await liveActivity?.update(activityContent)
 		}
 	}
 	
 	func didCompleteGame() {
 		Task {
-			await liveActivity?.end(using: .init(gameState: simulator.endGame()))
+			let finalContent = MyGameAttributes.ContentState(gameState: simulator.endGame())
+			await liveActivity?.end(ActivityContent(state: finalContent, staleDate: nil), dismissalPolicy: .default)
 		}
 	}
 	

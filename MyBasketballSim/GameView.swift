@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct GameView: View {
-	@StateObject var model: GameModel
+	@State var model: GameModel
 	
 	var body: some View {
 		VStack(spacing: 12) {
@@ -21,6 +21,7 @@ struct GameView: View {
 					Text("\(model.gameState.homeScore)")
 						.font(.system(size: 38, weight: .bold))
 						.contentTransition(.numericText())
+						.animation(.smooth, value: model.gameState.homeScore)
 				}
 				
 				Spacer()
@@ -30,7 +31,8 @@ struct GameView: View {
 					Text("\(model.gameState.awayScore)")
 						.font(.system(size: 38, weight: .bold))
 						.contentTransition(.numericText())
-
+						.animation(.smooth, value: model.gameState.awayScore)
+					
 					Image(model.simulator.awayTeam.name)
 						.teamLogoModifier(frame: 80)
 				}
@@ -47,6 +49,7 @@ struct GameView: View {
 			.font(.callout)
 			.fontWeight(.semibold)
 			.padding(.bottom, 40)
+			.animation(.smooth, value: model.gameState.scoringTeamName)
 			
 			// Buttons
 			VStack(spacing: 12) {
