@@ -77,6 +77,7 @@
 		66AA86932C2DE29200739536 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		66AA86952C2DE29E00739536 /* Image+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Ext.swift"; sourceTree = "<group>"; };
 		66CF5CDB2C2F28C3009C3B5C /* GameAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAttributes.swift; sourceTree = "<group>"; };
+		66CF5CDE2C2F67A7009C3B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +160,7 @@
 		66AA867A2C2DE1D900739536 /* MyBasketballSim */ = {
 			isa = PBXGroup;
 			children = (
+				66CF5CDE2C2F67A7009C3B5C /* Info.plist */,
 				66AA867B2C2DE1D900739536 /* MyBasketballSimApp.swift */,
 				66AA867D2C2DE1D900739536 /* GameView.swift */,
 				66AA86892C2DE21400739536 /* Model */,
@@ -521,6 +523,7 @@
 				DEVELOPMENT_TEAM = SVT2GB99S9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyBasketballSim/Info.plist;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -552,6 +555,7 @@
 				DEVELOPMENT_TEAM = SVT2GB99S9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyBasketballSim/Info.plist;
 				INFOPLIST_KEY_NSSupportsLiveActivities = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

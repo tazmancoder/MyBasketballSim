@@ -20,6 +20,7 @@ struct GameView: View {
 					
 					Text("\(model.gameState.homeScore)")
 						.font(.system(size: 38, weight: .bold))
+						.contentTransition(.numericText())
 				}
 				
 				Spacer()
@@ -28,7 +29,8 @@ struct GameView: View {
 				HStack(spacing: 20) {
 					Text("\(model.gameState.awayScore)")
 						.font(.system(size: 38, weight: .bold))
-					
+						.contentTransition(.numericText())
+
 					Image(model.simulator.awayTeam.name)
 						.teamLogoModifier(frame: 80)
 				}
